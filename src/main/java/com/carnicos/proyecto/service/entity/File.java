@@ -20,8 +20,18 @@ public class File {
     private String estado;
 
     private boolean eliminado;
+    
+    private String urlfileremoto;
 
-    @Transient
+    public String getUrlfileremoto() {
+		return urlfileremoto;
+	}
+
+	public void setUrlfileremoto(String urlfileremoto) {
+		this.urlfileremoto = urlfileremoto;
+	}
+
+	@Transient
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private MultipartFile file;
 
